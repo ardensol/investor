@@ -1,0 +1,47 @@
+<div class="container-fluid" id="profile-summary" style="margin-top: 100px;">
+  <div class="profile-padding">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="media-photo-badge">
+              <div class="media-photo media-round">
+                <%= image_tag '/img/profile_pic.png', class: 'media-photo media-round' %>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <h1 class="profile-header"><%= @user.email %></h1>
+            <p>Real Estate Investor | 3 Successful Transactions</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="profile-description">
+  <div class="profile-padding">
+    <div class="row">
+      <div class="col-md-8">
+        <h1><%= @user.email %></h1>
+        <hr/>
+        <h4>Description</h4>
+        <div class="panel">
+          <%= @user.email %>
+        </div>
+        <h5>About</h5>
+        <hr/>
+      </div>
+      <div class="col-md-4">
+        <div style="margin-bottom: 500px"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
