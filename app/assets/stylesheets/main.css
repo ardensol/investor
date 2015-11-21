@@ -4,6 +4,68 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+.profile-image {
+    width: 100%;
+    background: no-repeat;
+    background-position: 50% 50%;
+    margin-top: -100px;
+}
+
+.profile-padding {
+    padding: 30px 150px
+}
+
+.panel {
+    border: 1px solid #dce0e0;
+    padding: 20px;
+}
+
+.full {
+    width: 100%;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+    border-top: 1px solid #dce0e0;
+}
+
+.media-photo-badge {
+    display: inline-block;
+    position: relative;
+}
+
+.media-photo {
+    backface-visibility: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+    background-color: #cacccd;
+    height: 125px;
+}
+
+.profile-header {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+#profile-summary {
+    background-color: white;
+}
+
+#profile-description {
+    background-color: #f5f5f5;
+}
+
+
+
+.media-round {
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
