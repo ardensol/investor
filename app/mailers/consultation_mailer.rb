@@ -5,6 +5,6 @@ class ConsultationMailer < ActionMailer::Base
   def new_message(consultation)
     @consultation = consultation
     mail(:subject => "New Consultation Request!",
-         bcc:"austinyhua@gmail.com" )
+         bcc:"support@jointinvestor.com" )
   end
 end
