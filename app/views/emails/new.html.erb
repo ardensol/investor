@@ -1,0 +1,11 @@
+<%= form_for( @email, url: { controller: 'emails', action: 'create'}, remote: true )do |f| %>
+    <div class="form-inline">
+      <div class="form-group" id="new_email">
+        <%= f.text_field(:email,
+                         placeholder: 'E-mail Address...',
+                         class: 'form-control',
+                         style: 'width: 500px; height: 65px') %>
+        <%= f.submit("I'm Interested!", class: 'btn btn-xl') %>
+      </div>
+    </div>
+<% end %>

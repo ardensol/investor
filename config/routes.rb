@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'investors/:id' => 'users#show', as: 'investor'
 
+  resources :emails
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

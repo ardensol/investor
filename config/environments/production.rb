@@ -84,4 +84,13 @@ Rails.application.configure do
           :secret_access_key => ENV['S3_SECRET']
       }
   }
+
+  config.action_mailer.smtp_settings = {
+      :authentication => :plain,
+      :address => "smtp.mailgun.org",
+      :port => 587,
+      :domain => "app2453ba31ea0d437eb9dde834c35c6b81.mailgun.org",
+      :user_name => "postmaster@app2453ba31ea0d437eb9dde834c35c6b81.mailgun.org",
+      :password => "c37b91d7baa5b63161a9b88878973f30"
+  }
 end
