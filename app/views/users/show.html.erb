@@ -6,12 +6,12 @@
           <div class="col-md-3">
             <div class="media-photo-badge">
               <div class="media-photo media-round">
-                <%= image_tag '/img/profile_pic.png', class: 'media-photo media-round' %>
+                <%= image_tag @user.avatar, class: 'media-photo media-round' %>
               </div>
             </div>
           </div>
           <div class="col-md-9">
-            <h1 class="profile-header"><%= @user.email %></h1>
+            <h1 class="profile-header"><%= @user.name %></h1>
             <p>Real Estate Investor | 3 Successful Transactions</p>
           </div>
         </div>
@@ -27,13 +27,30 @@
   <div class="profile-padding">
     <div class="row">
       <div class="col-md-8">
-        <h1><%= @user.email %></h1>
+        <h1><%= @user.name %></h1>
         <hr/>
         <h4>Description</h4>
         <div class="panel">
-          <%= @user.email %>
+          <h3>Sourced Deals</h3>
+          <div class="row">
+            <% @investments.each do |investment| %>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                  <a href="/investments/<%= investment.id %>" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                      </div>
+                    </div>
+                    <%= image_tag investment.sub_image, class: 'img-responsive' %>
+                  </a>
+                  <div class="portfolio-caption">
+                    <h4><%= investment.name %></h4>
+                    <p class="text-muted"><%= investment.description.truncate(100) %></p>
+                  </div>
+                </div>
+            <% end %>
+          </div>
         </div>
-        <h5>About</h5>
+
         <hr/>
       </div>
       <div class="col-md-4">
@@ -43,5 +60,6 @@
     </div>
   </div>
 </div>
+
 
 

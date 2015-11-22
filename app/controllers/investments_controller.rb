@@ -10,6 +10,7 @@ class InvestmentsController < ApplicationController
   # GET /investments/1
   # GET /investments/1.json
   def show
+    @sorceror = @investment.user
   end
 
   # GET /investments/new

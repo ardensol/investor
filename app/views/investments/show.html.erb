@@ -8,12 +8,12 @@
             <div class="col-md-3">
                 <div class="media-photo-badge">
                     <div class="media-photo media-round">
-                      <%= image_tag '/img/profile_pic.png', class: 'media-photo media-round' %>
+                      <%= image_tag @sorceror.avatar, class: 'media-photo media-round' %>
                     </div>
                 </div>
             </div>
             <div class="col-md-9">
-                <h1 class="profile-header"><%= @investment.name %></h1>
+                <h1 class="profile-header"><%= link_to @sorceror.name, investor_path(@sorceror.id) %></h1>
                 <p>Real Estate Investor | 3 Successful Transactions</p>
             </div>
           </div>

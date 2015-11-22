@@ -7,6 +7,10 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
+    <div class="field">
+      <h4>NAME</h4>
+      <%= f.text_field :name %>
+    </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -26,6 +30,11 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
+
+    <div class="field">
+      <h4>PICTURE</h4>
+      <%= f.file_field :avatar %>
+    </div>
 
   <div class="actions">
     <%= f.submit "Update" %>
